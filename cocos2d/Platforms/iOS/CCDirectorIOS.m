@@ -63,7 +63,7 @@
 #pragma mark -
 #pragma mark Director - global variables (optimization)
 
-CGFloat	__ccContentScaleFactor = 1;
+float	__ccContentScaleFactor = 1;
 
 #pragma mark -
 #pragma mark Director
@@ -502,7 +502,7 @@ GLToClipTransform(kmMat4 *transformOut)
 
 -(void)getFPSImageData:(unsigned char**)datapointer length:(NSUInteger*)len
 {
-	int device = [[CCConfiguration sharedConfiguration] runningDevice];
+	int device = (int)[[CCConfiguration sharedConfiguration] runningDevice];
 
 	if( device == kCCDeviceiPadRetinaDisplay) {
 		*datapointer = cc_fps_images_ipadhd_png;
